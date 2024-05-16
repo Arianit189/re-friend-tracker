@@ -6,7 +6,7 @@ export class GuiModel {
 
     private _guiModel = {
         "application": {
-            "title": "ZHAW Requirements Engineering Friend Tracker (FS2024)",
+            "title": "ZHAW Requirements Engineering Friend Tracker (FS2024), SalihAri, SopaSua1",
             "formList": [
                 {
                     "id": "FriendForm",
@@ -27,6 +27,13 @@ export class GuiModel {
                             "width": 1,
                             "required": true
                         },
+                        {
+                            "id": "nickname",
+                            "type": "text",
+                            "name": "Nickname",
+                            "width": 2,
+                            "required": true
+                           },
                         {
                             "id":   "location",
                             "type": "autocomplete",
