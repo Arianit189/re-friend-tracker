@@ -43,6 +43,14 @@ export class GuiModel {
                             "width": 2
                         },
                         {
+                            "id": "group",
+                            "type": "autocomplete",
+                            "name": "Group",
+                            "url": "/group",
+                            "form": "GroupForm",
+                            "width": 2
+                           },
+                        {
                             "id": "birthdate",
                             "type": "date",
                             "name": "Birthday",
@@ -130,6 +138,32 @@ export class GuiModel {
                     }
                     ]
                    },
+                   {
+                    "id": "ActivityForm",
+                    "title": "Activity",
+                    "url": "/activity",
+                    "formFieldList": [
+                    {
+                    "id": "name",
+                    "type": "text",
+                    "name": "ActivityName",
+                    "width": 2,
+                    "required": true
+                    },
+                    {
+                    "type": "deleteButton",
+                    "name": "Delete"
+                    },
+                    {
+                    "type": "cancelButton",
+                    "name": "Cancel"
+                    },
+                    {
+                    "type": "okButton",
+                    "name": "Ok"
+                    }
+                    ]
+                   },
                 {
                     "id": "AddActivityForm",
                     "title": "Activity",
@@ -188,6 +222,15 @@ export class GuiModel {
                             "color": "yellow",
                             "page": "locationspage",
                         },
+                    
+                        {
+                            "type": "button",
+                            "name": "Activity",
+                            "icon": "fa-dragon",
+                            "color": "carrot",
+                            "page": "activityspage",
+                           },
+
                     ]
                 },
                 {
@@ -268,6 +311,33 @@ export class GuiModel {
                         "url": "/group",
                         "form": {
                         "form": "GroupForm"
+                        }
+                    },
+                    ]
+                   },
+                   {
+                    "id": "activityspage",
+                    "elementList": [
+                    {
+                    "type": "backbutton",
+                    },
+                    {
+                    "type": "newButton",
+                    "name": "NewActivity",
+                    "icon": "fa-dragon",
+                    "color": "green",
+                    "form": {
+                    "form": "ActivityForm"
+                    }
+                    },
+                    {
+                        "type": "list",
+                        "icon": "fa-dragon",
+                        "color": "carrot",
+                        "search": true,
+                        "url": "/activity",
+                        "form": {
+                        "form": "ActivityForm"
                         }
                     },
                     ]
